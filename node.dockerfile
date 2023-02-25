@@ -1,4 +1,4 @@
-FROM        node:alpine
+FROM        node:"mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye"
 
 ARG         PACKAGES=nano
 
