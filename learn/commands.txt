@@ -1,0 +1,12 @@
+Build Node App: 
+docker build -f node.dockerfile -t dockercommands .
+
+Create a custom bridge network
+docker network create --driver bridge dc_network
+
+Run the containers
+docker run -d --net=dc_network --name mongodb mongo
+docker run -d --net=dc_network --name nodeapp -p 3000:3000 -v $(pwd)/logs:/var/www/logs dockercommands
+
+# Seed the database with sample database
+docker exec nodeapp node dbSeeder.js
