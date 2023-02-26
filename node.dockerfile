@@ -1,8 +1,4 @@
-FROM        node:alpine
-
-ARG         PACKAGES=nano
-
-RUN         apk update && apk add $PACKAGES
+FROM        mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye
 
 WORKDIR     /var/www
 

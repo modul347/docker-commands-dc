@@ -8,8 +8,6 @@ services:
     build:
       context: .
       dockerfile: node.dockerfile
-      args:
-        PACKAGES: "nano wget curl"
     ports:
       - "3000:3000"
     networks:
