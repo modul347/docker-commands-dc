@@ -8,7 +8,7 @@ const express = require('express'),
       Handlebars = require('handlebars'),
       { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access'),
 
-      port = process.env.PORT || 3000,
+      port = process.env.PORT || 3008,
       config = require('./lib/configLoader'),    
       db = require('./lib/database'),
 
