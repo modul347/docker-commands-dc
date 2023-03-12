@@ -1,12 +1,6 @@
 FROM        mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye
 
-#WORKDIR     /var/www
+WORKDIR     /workspaces/docker-commands-dc
 
-#COPY        package.json package-lock.json ./
+COPY        . .
 
-#RUN         npm install
-
-#COPY        . .
-#EXPOSE      3000
-
-# ENTRYPOINT  ["npm", "start"]
