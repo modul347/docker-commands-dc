@@ -29,7 +29,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // create a write stream (in append mode)
 const accessLogStream = fs.createWriteStream(path.join(__dirname, '/logs/access.log'), { flags: 'a' });
-app.use(morgan('combined', { stream: accessLogStream }));
+app.use(morgan('combined', { stream: accessLogStream }));  
 
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.use(express.json());
